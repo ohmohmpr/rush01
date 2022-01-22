@@ -3,7 +3,6 @@ char    trim_space(char argv[])
 {
     int i;
     int len;
-    char a[16];
 
     // printf("%p", argv);
     i = 0;

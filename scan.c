@@ -1,4 +1,7 @@
 #include <stdio.h>
+
+void    f1_p4(int i, int j, char arr[][6], char nbr_rc);
+
 void    scan(char argv[], char arr[][6])
 {
     int count;
@@ -13,15 +16,20 @@ void    scan(char argv[], char arr[][6])
         
         if (count / 4 == 0) // 0,4 - 5,1 - 4,0 - 1,5
         {
-            i = 0;
+            i = 0; // 0,0 - 0,1 - 0,2 - 0,3 - 0,4 - 0,5
             j = count + 1;
             // printf("char = %c, ", argv[count]);
             // printf("i = %d, j = %d\n", i, j);
             if (argv[count] == '1')
             {
-                // printf("i = %d, j = %d\n", i, j);
-                arr[i + 1][j] = '4';
+                f1_p4(i, j, arr, '1');
             }
+
+            // if (argv[count] == '4')
+            // {
+
+            // }
+
         }
         else if (count / 4 == 1)
         {
@@ -31,8 +39,7 @@ void    scan(char argv[], char arr[][6])
             // printf("i = %d, j = %d\n", i, j);
             if (argv[count] == '1')
             {
-                // printf("i = %d, j = %d\n", i, j);
-                arr[i - 1][j] = '4';
+                f1_p4(i, j, arr, '2');
             }
         }
         else if (count / 4 == 2)
@@ -43,8 +50,7 @@ void    scan(char argv[], char arr[][6])
             // printf("i = %d, j = %d\n", i, j);
             if (argv[count] == '1')
             {
-                // printf("i = %d, j = %d\n", i, j);
-                arr[i][j + 1] = '4';
+                f1_p4(i, j, arr, '3');
             }
         }
         else if (count / 4 == 3)
@@ -56,7 +62,8 @@ void    scan(char argv[], char arr[][6])
             if (argv[count] == '1')
             {
                 // printf("i = %d, j = %d\n", i, j);
-                arr[i][j - 1] = '4';
+                // arr[i][j - 1] = '4';
+                f1_p4(i, j, arr, '4');
             }
         }
         else

@@ -12,6 +12,7 @@ int main(int argc,char* argv[])
     int counter;
     char arr[6][6];
 
+    counter = argc;
     // counter = find_dim(argv[1]);
     // printf("dim = %d", counter);
     trim_space(argv[1]);
