@@ -8,10 +8,10 @@ void    insert_outer(char arr[][6], char argv[])
     i = 0; //row
     j = 0; //col
     // dia
-    arr[0][0] = 'x';
-    arr[0][5] = 'x';
-    arr[5][0] = 'x';
-    arr[5][5] = 'x';
+    arr[0][0] = '/';
+    arr[0][5] = '\\';
+    arr[5][0] = '\\';
+    arr[5][5] = '/';
     // insert_col_up
     while (j < 6)
     {
